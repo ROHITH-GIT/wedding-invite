@@ -3,104 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bhaskar ❤️ Madhavi | Wedding Invite</title>
+  <title>Bhaskar ❤️ Madhavi | Love Story</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: #fffaf5;
+      box-sizing: border-box;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       font-family: 'Open Sans', sans-serif;
-      color: #444;
+      background: #fffaf5;
+    }
+    .book {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .page {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      color: #333;
       text-align: center;
-    }
-    header {
-      background: linear-gradient(135deg, #f8cdda 0%, #1d2b64 100%);
-      color: white;
-      padding: 60px 20px;
-    }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5em;
-      margin: 0;
-    }
-    h2 {
-      font-size: 1.5em;
-      margin-top: 10px;
-      font-weight: normal;
-    }
-    .section {
-      padding: 50px 20px;
-    }
-    .date {
       font-size: 2em;
-      font-weight: bold;
-      color: #e91e63;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      z-index: 0;
     }
-    .countdown {
-      font-size: 1.5em;
-      margin-top: 20px;
+    .page.visible {
+      opacity: 1;
+      z-index: 1;
     }
-    .wedding-scene {
-      margin-top: 40px;
-      animation: fadeInUp 2s ease-in-out;
+    .title {
+      font-size: 3em;
+      margin-bottom: 20px;
+      font-family: 'Great Vibes', cursive;
     }
-    .wedding-image {
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    }
-    footer {
-      background: #fce4ec;
-      padding: 30px;
-      font-size: 0.9em;
+    .caption {
+      font-size: 1.2em;
+      max-width: 80%;
+      background: rgba(255,255,255,0.8);
+      padding: 1em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     audio {
       position: fixed;
       bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 999;
-    }
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      z-index: 9999;
     }
   </style>
 </head>
 <body>
-  <header class="animate__animated animate__fadeInDown">
-    <h1>Bhaskar ❤️ Madhavi</h1>
-    <h2>are getting married!</h2>
-  </header>
-
-  <section class="section animate__animated animate__fadeInUp animate__delay-1s">
-    <p class="date">March 19, 2026</p>
-    <div class="countdown" id="countdown"></div>
-  </section>
-
-  <section class="section animate__animated animate__fadeInUp animate__delay-2s">
-    <p>We would love your presence to bless this beautiful union.</p>
-    <p>Save the date and stay tuned for the full invitation!</p>
-  </section>
-
-  <section class="section wedding-scene">
-    <img src="https://cdn.pixabay.com/photo/2018/04/27/12/01/wedding-3358104_1280.jpg" alt="Wedding Couple After Ceremony" class="wedding-image">
-    <p style="margin-top: 20px; font-weight: bold;">Bhaskar & Madhavi just tied the knot! 🌺💍 Surrounded by family and friends after a beautiful temple ceremony.</p>
-  </section>
-
-  <footer>
-    With love,<br>
-    Bhaskar & Madhavi
-  </footer>
+  <div class="book">
+    <div class="page visible" id="page1" style="background-image: url('https://raw.githubusercontent.com/jackyzha0/gpt-garden-assets/main/ghibli1.jpg');">
+      <div class="title">When Bhaskar Met Madhavi</div>
+      <div class="caption">It all began with a smile at a temple festival... fate had plans.</div>
+    </div>
+    <div class="page" id="page2" style="background-image: url('https://raw.githubusercontent.com/jackyzha0/gpt-garden-assets/main/ghibli2.jpg');">
+      <div class="title">Their First Date</div>
+      <div class="caption">A breezy evening under cherry blossoms, laughter echoing like melodies.</div>
+    </div>
+    <div class="page" id="page3" style="background-image: url('https://raw.githubusercontent.com/jackyzha0/gpt-garden-assets/main/ghibli3.jpg');">
+      <div class="title">The Proposal</div>
+      <div class="caption">He knelt. She smiled. Fireflies danced as stars witnessed their forever begin.</div>
+    </div>
+    <div class="page" id="page4" style="background-image: url('https://raw.githubusercontent.com/jackyzha0/gpt-garden-assets/main/ghibli4.jpg');">
+      <div class="title">The Engagement</div>
+      <div class="caption">Rings exchanged. Promises made. Two souls, one journey under twilight skies.</div>
+    </div>
+    <div class="page" id="page5" style="background-image: url('https://raw.githubusercontent.com/jackyzha0/gpt-garden-assets/main/ghibli5.jpg');">
+      <div class="title">The Wedding</div>
+      <div class="caption">March 19, 2026 — Bhaskar & Madhavi tie the knot. A celebration of love!</div>
+    </div>
+  </div>
 
   <audio autoplay loop>
     <source src="https://dl.dropboxusercontent.com/s/hbl0sbg63mlhr9f/indian-wedding-bgm.mp3" type="audio/mpeg">
@@ -108,29 +98,18 @@
   </audio>
 
   <script>
-    // Countdown Script
-    const targetDate = new Date("March 19, 2026").getTime();
-    const countdownEl = document.getElementById("countdown");
+    const pages = document.querySelectorAll('.page');
+    let current = 0;
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-
-      if (diff < 0) {
-        countdownEl.innerHTML = "🎉 The Big Day Has Arrived!";
-        return;
+    function showNextPage() {
+      if (current < pages.length - 1) {
+        pages[current].classList.remove('visible');
+        current++;
+        pages[current].classList.add('visible');
       }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdownEl.innerHTML = `⏳ ${days} days ${hours}h ${minutes}m ${seconds}s left`;
     }
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+    setInterval(showNextPage, 5000);
   </script>
 </body>
 </html>
