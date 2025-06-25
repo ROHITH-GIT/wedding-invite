@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bhaskar ❤️ Madhavi | Wedding Invite</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fffaf5;
+      font-family: 'Open Sans', sans-serif;
+      color: #444;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(135deg, #f8cdda 0%, #1d2b64 100%);
+      color: white;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin: 0;
+    }
+    h2 {
+      font-size: 1.5em;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+    .section {
+      padding: 50px 20px;
+    }
+    .date {
+      font-size: 2em;
+      font-weight: bold;
+      color: #e91e63;
+    }
+    .countdown {
+      font-size: 1.5em;
+      margin-top: 20px;
+    }
+    footer {
+      background: #fce4ec;
+      padding: 30px;
+      font-size: 0.9em;
+    }
+    audio {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <h1>Bhaskar ❤️ Madhavi</h1>
+    <h2>are getting married!</h2>
+  </header>
+
+  <section class="section animate__animated animate__fadeInUp animate__delay-1s">
+    <p class="date">March 19, 2026</p>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+  <section class="section animate__animated animate__fadeInUp animate__delay-2s">
+    <p>We would love your presence to bless this beautiful union.</p>
+    <p>Save the date and stay tuned for the full invitation!</p>
+  </section>
+
+  <footer>
+    With love,<br>
+    Bhaskar & Madhavi
+  </footer>
+
+  <audio controls autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Countdown Script
+    const targetDate = new Date("March 19, 2026").getTime();
+    const countdownEl = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff < 0) {
+        countdownEl.innerHTML = "🎉 The Big Day Has Arrived!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `⏳ ${days} days ${hours}h ${minutes}m ${seconds}s left`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
