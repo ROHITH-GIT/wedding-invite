@@ -42,6 +42,16 @@
       font-size: 1.5em;
       margin-top: 20px;
     }
+    .wedding-scene {
+      margin-top: 40px;
+      animation: fadeInUp 2s ease-in-out;
+    }
+    .wedding-image {
+      max-width: 90%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
     footer {
       background: #fce4ec;
       padding: 30px;
@@ -53,6 +63,16 @@
       left: 50%;
       transform: translateX(-50%);
       z-index: 999;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -72,13 +92,18 @@
     <p>Save the date and stay tuned for the full invitation!</p>
   </section>
 
+  <section class="section wedding-scene">
+    <img src="https://cdn.pixabay.com/photo/2018/04/27/12/01/wedding-3358104_1280.jpg" alt="Wedding Couple After Ceremony" class="wedding-image">
+    <p style="margin-top: 20px; font-weight: bold;">Bhaskar & Madhavi just tied the knot! 🌺💍 Surrounded by family and friends after a beautiful temple ceremony.</p>
+  </section>
+
   <footer>
     With love,<br>
     Bhaskar & Madhavi
   </footer>
 
-  <audio controls autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  <audio autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/s/hbl0sbg63mlhr9f/indian-wedding-bgm.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
